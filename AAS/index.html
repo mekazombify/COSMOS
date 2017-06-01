@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MICRONERVA</title>
+    <link rel="stylesheet" href="client.css"></link>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h1>MICRONERVA</h1>
+    <h2>AAS Edition</h2>
+    <h2>Powered By COSMOS</h2>
+    <h3>Peter Plavchan | Ryan Hall | Frank Giddens</h3>
+    <canvas id="camData"></canvas>
+    <canvas id="camData2"></canvas>
+    <div id="camStats">
+      <label>
+        Image Filter:
+        <select id="filter">
+          <option value="linear">Linear</option>
+          <option value="histogram">Histogram</option>
+        </select>
+      </label>
+      <label>Mouse X: <span id="mousex">N/A</span></label>
+      <label>Mouse Y: <span id="mousey">N/A</span></label>
+      <label>Counts: <span id="counts">N/A</span></label>
+    </div>
+    <div id="tempHumSensor">
+      <label>Temperature: <span id="temp">N/A</span></label>
+      <label>Humidity: <span id="humid">N/A</span></label>
+    </div>
+    <div id="dashboard">
+      <div id="dashSelect">
+        <span id="curDash"></span>
+        <button id="camSelect">Camera</button>
+        <button id="focSelect">Focuser</button>
+        <button id="telSelect">Telescope</button>
+      </div>
+      <div id="camDash">
+        <label>Object Name: <input id="objName"></input></label>
+        <label>Image Number: <input id="objNum"></input></label>
+        <label>Exposure Time: <input id="expTime"></input></label>
+        <label>Save: <input type="checkbox" id="save"></input></label>
+        <button id="expose">Expose</button>
+      </div>
+      <div id="focDash">
+        <button id="autofocus">Autofocus</button>
+      </div>
+      <div id="telDash">
+        <label>
+          Altitude:
+          <span id="alt">N/A</span>
+        </label>
+        <label>
+          Azimuth:
+          <span id="azi">N/A</span>
+        </label>
+        <label>
+          Direction:
+          <select id="direction">
+            <option value="up">Up</option>
+            <option value="down">Down</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+          </select>
+        </label>
+        <label>
+          Speed:
+          <select id="speed">
+            <option value="1">Motor Speed 1</option>
+            <option value="2">Motor Speed 2</option>
+            <option value="3">Motor Speed 3</option>
+            <option value="4">Motor Speed 4</option>
+            <option value="5">Motor Speed 5</option>
+            <option value="6">Motor Speed 6</option>
+            <option value="7">Motor Speed 7</option>
+            <option value="8">Motor Speed 8</option>
+            <option value="9">Motor Speed 9</option>
+          </select>
+        </label>
+        <label>Time: <input id="moveTime"></input></label>
+        <button id="move">Move</button>
+      </div>
+    </div>
+    <script src="client.js"></script>
+  </body>
+</html>

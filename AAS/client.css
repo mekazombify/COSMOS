@@ -1,0 +1,35 @@
+body {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+h2 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+h3 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+canvas {
+  text-align: center;
+}
+
+#camData2 {
+  float: right;
+}
+
+#dashboard {
+  bottom: 0px;
+  position: absolute;
+}
